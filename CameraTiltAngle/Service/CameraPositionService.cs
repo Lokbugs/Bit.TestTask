@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using CameraTiltAngle.DataModels;
 using CameraTiltAngle.Repository;
 using NLog;
 
+[assembly: InternalsVisibleTo("CameraTiltAngle.Tests")]
 namespace CameraTiltAngle.Service
 {
     internal class CameraPositionService : ICameraPositionService

@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using CameraTiltAngle.DataModels;
 using Dapper;
 
+[assembly: InternalsVisibleTo("CameraTiltAngle.Tests")]
 namespace CameraTiltAngle.Repository
 {
     internal class CameraPositionRepository : ICameraPositionRepository
