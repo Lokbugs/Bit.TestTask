@@ -1,4 +1,4 @@
-FROM docker-gorgona.spr.sd.itmh.ru/mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 
 ARG SERVICE=CameraTiltAngle
 
