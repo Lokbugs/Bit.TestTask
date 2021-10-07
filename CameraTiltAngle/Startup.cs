@@ -47,16 +47,16 @@ namespace CameraTiltAngle
         {
             ConfigureLogger();
             
+            app.UseSwagger();
+                
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CameraTiltController");
+            });
+            
             if (env.IsDevelopment() || env.IsStaging())
             {
                 app.UseDeveloperExceptionPage();
-                
-                app.UseSwagger();
-                
-                app.UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "CameraTiltController");
-                });
             }
 
             app.UseRouting();
